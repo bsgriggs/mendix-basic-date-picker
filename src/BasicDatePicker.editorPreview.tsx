@@ -9,11 +9,13 @@ export function preview({ class: className, dateFormat }: BasicDatePickerPreview
             className={className}
             dateFormat={dateFormat}
             date={new Date()}
-            // eslint-disable-next-line @typescript-eslint/no-empty-function
-            setDate={() => {}}
             readOnly={false}
             min={undefined}
             max={undefined}
+            // eslint-disable-next-line @typescript-eslint/no-empty-function
+            setDate={() => {}}
+            // eslint-disable-next-line @typescript-eslint/no-empty-function
+            onBlur={() => {}}
         />
     );
 }

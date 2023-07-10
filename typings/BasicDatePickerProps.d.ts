@@ -16,7 +16,8 @@ export interface BasicDatePickerContainerProps {
     id: string;
     dateFormat: DateFormatEnum;
     date: EditableValue<Date>;
-    onDateChange?: ActionValue;
+    onChange?: ActionValue;
+    onLeave?: ActionValue;
     min?: DynamicValue<string>;
     max?: DynamicValue<string>;
 }
@@ -26,7 +27,8 @@ export interface BasicDatePickerPreviewProps {
     style: string;
     dateFormat: DateFormatEnum;
     date: string;
-    onDateChange: {} | null;
+    onChange: {} | null;
+    onLeave: {} | null;
     min: string;
     max: string;
 }

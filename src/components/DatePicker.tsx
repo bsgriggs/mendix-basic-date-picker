@@ -13,6 +13,7 @@ interface DatePickerProps {
     readOnly: boolean;
     min?: string;
     max?: string;
+    onBlur: () => void;
 }
 
 const toDatetimeLocal = (date: Date): string => {
@@ -38,7 +39,8 @@ const DatePicker = ({
     dateFormat,
     readOnly,
     min,
-    max
+    max,
+    onBlur
 }: DatePickerProps): ReactElement => {
     const formatDateValue = useCallback(
         (date: Date | undefined): string => {
@@ -99,6 +101,7 @@ const DatePicker = ({
             value={formatDateValue(date)}
             onChange={onChangeHandler}
             readOnly={readOnly}
+            onBlur={onBlur}
             min={min}
             max={max}
         />

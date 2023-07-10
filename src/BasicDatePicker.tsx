@@ -12,7 +12,8 @@ export function BasicDatePicker({
     dateFormat,
     date,
     min,
-    max
+    max,
+    onLeave
 }: BasicDatePickerContainerProps): ReactElement {
     return (
         <Fragment>
@@ -27,6 +28,11 @@ export function BasicDatePicker({
                 readOnly={date.readOnly}
                 min={min ? (min.value as string) : undefined}
                 max={max ? (max.value as string) : undefined}
+                onBlur={() => {
+                    if (onLeave !== undefined && onLeave.canExecute && !onLeave.isExecuting) {
+                        onLeave.execute();
+                    }
+                }}
             />
             {date.validation && <Alert>{date.validation}</Alert>}
         </Fragment>

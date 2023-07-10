@@ -20,15 +20,19 @@
                         <enumerationValue key="DATETIME">Date and Time</enumerationValue>
                     </enumerationValues>
                 </property>
-                <property key="date" type="attribute" required="true" onChange="onDateChange">
+                <property key="date" type="attribute" required="true" onChange="onChange">
                     <caption>Date</caption>
                     <description>The attribute to write the selected Date</description>
                     <attributeTypes>
                         <attributeType name="DateTime" />
                     </attributeTypes>
                 </property>
-                <property key="onDateChange" type="action">
+                <property key="onChange" type="action" required="false">
                     <caption>On change</caption>
+                    <description></description>
+                </property>
+                <property key="onLeave" type="action" required="false">
+                    <caption>On leave</caption>
                     <description></description>
                 </property>
             </propertyGroup>
