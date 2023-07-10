@@ -5,7 +5,7 @@
     xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Basic Date Picker</name>
-    <description>Simple date picker to meet a11y requirements</description>
+    <description>Date, DateTime, and Time picker that uses the vanilla HTML date input. This can be used to meet accessibility requirements.</description>
     <icon />
     <properties>
         <propertyGroup caption="General">
